@@ -8,9 +8,9 @@ sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-de
 
 # Get i3-gaps
 sudo apt install git -y
-git clone https://www.github.com/Airblader/i3 i3-gaps
+git clone https://www.github.com/Airblader/i3 ~/i3-gaps
 
-pushd i3-gaps
+pushd ~/i3-gaps
 autoreconf --force --install
 rm -rf build/
 mkdir -p build && cd build/
@@ -18,3 +18,5 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
+
+popd

@@ -51,5 +51,10 @@ cmake ..
 make install
 popd
 
-install -Dm644 ~/machines/home/.config/polybar/ ~/.config/polybar
-install -Dm644 ~/machines/home/.xinitrc ~/.xinitrc
+mkdir -p ~/.config/polybar
+cp -R ~/machines/home/.config/polybar ~/.config/polybark
+
+mkdir -p ~/.config/i3
+cp -R ~/machines/home/.config/i3 ~/.config/i3
+
+cp ~/machines/home/* ~

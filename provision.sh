@@ -4,7 +4,7 @@
 sudo apt install software-properties-common -y
 
 # Needed for libxcb-xrm-dev, needed by i3wm
-add-apt-repository ppa:aguignard/ppa -y
+sudo add-apt-repository ppa:aguignard/ppa -y
 sudo apt update
 
 # Install Xfce4
@@ -39,7 +39,7 @@ popd
 # polybar
 sudo apt install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev -y
 
-if [[ ! -d "~/polybar" ]]; then
+if [[ ! -d ~/polybar ]]; then
     git clone --branch 3.0.5 --recursive https://github.com/jaagr/polybar ~/polybar
 else
     pushd ~/polybar
@@ -48,7 +48,7 @@ else
 fi
 
 if [[ -d ~/polybar/build ]]; then
-    rm -r ~/polybar/build
+    rm -rf ~/polybar/build
 fi
 
 mkdir ~/polybar/build

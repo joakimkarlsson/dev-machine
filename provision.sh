@@ -47,11 +47,11 @@ else
     popd
 fi
 
-if [[ -d ~/polybar/build ]]; then
-    rm -rf ~/polybar/build
-fi
+# if [[ -d ~/polybar/build ]]; then
+#     rm -rf ~/polybar/build
+# fi
 
-mkdir ~/polybar/build
+mkdir -p ~/polybar/build
 pushd ~/polybar/build
 cmake ..
 sudo make install
@@ -68,8 +68,10 @@ else
     popd
 fi
 
+pushd ~/arc-theme
 ./autogen.sh --prefix=/usr
 sudo make install
+popd
 
 # Download fonts
 mkdir -p ~/.local/share/fonts

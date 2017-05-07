@@ -94,11 +94,11 @@ sudo apt install zsh vim-nox silversearcher-ag -y
 ln -s ~/dotfiles/.config/base16-shell ~/.config
 ln -s ~/dotfiles/.vim ~
 ln -s ~/dotfiles/.zshfunctions ~
-ln -s ~/.ctags ~
-ln -s ~/.tmux.conf ~
-ln -s ~/.tmuxline.conf ~
-ln -s ~/.vimrc ~
-ln -s ~/.zshrc ~
+ln -s ~/dotfiles/.ctags ~
+ln -s ~/dotfiles/.tmux.conf ~
+ln -s ~/dotfiles/.tmuxline.conf ~
+ln -s ~/dotfiles/.vimrc ~
+ln -s ~/dotfiles/.zshrc ~
 
 
 

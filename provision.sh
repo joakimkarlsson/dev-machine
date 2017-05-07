@@ -58,7 +58,7 @@ sudo make install
 popd
 
 # Arc Theme
-sudo apt install libgtk-3-dev gnome-themes-standard gkt2-engines-murrine -y
+sudo apt install libgtk-3-dev gnome-themes-standard gtk2-engines-murrine -y
 
 if [[ ! -d ~/arc-theme ]]; then
     git clone https://github.com/horst3180/arc-theme --depth 1

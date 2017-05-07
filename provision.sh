@@ -57,10 +57,6 @@ cmake ..
 sudo make install
 popd
 
-mkdir -p ~/.config/polybar
-cp -R ~/machines/home/.config/polybar ~/.config/polybar
+rsync -rc ~/machines/home/.config ~/
 
-mkdir -p ~/.config/i3
-cp -R ~/machines/home/.config/i3 ~/.config/i3
-
-cp ~/machines/home/.xinitrc ~
+rm -rf ~/.cache/sessions

@@ -11,6 +11,8 @@ sudo apt update
 sudo apt install xubuntu-desktop gnome-terminal menu --no-install-recommends -y
 sudo apt install gnome-terminal xfwm4-themes xfce4-terminal --no-install-recommends -y
 
+sudo apt install build-essential cmake -y
+
 # Dependencies for i3-gaps
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev libxcb-xrm-dev -y
 
@@ -43,6 +45,10 @@ else
     pushd ~/polybar
     git pull
     popd
+fi
+
+if [[ -d ~/polybar/build ]]; then
+    rm -r ~/polybar/build
 fi
 
 mkdir ~/polybar/build

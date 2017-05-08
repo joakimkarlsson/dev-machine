@@ -89,7 +89,9 @@ else
     popd
 fi
 
-sudo apt install zsh vim-nox silversearcher-ag -y
+sudo add-apt-repository ppa:pi-rho/dev -y
+
+sudo apt install zsh vim silversearcher-ag -y
 
 ln -s ~/dotfiles/.config/base16-shell ~/.config
 ln -s ~/dotfiles/.vim ~
